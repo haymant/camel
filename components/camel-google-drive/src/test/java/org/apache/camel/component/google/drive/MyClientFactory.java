@@ -28,7 +28,7 @@ public class MyClientFactory implements GoogleDriveClientFactory {
     }
 
     @Override
-    public Drive makeClient(String clientId, String clientSecret, Collection<String> scopes, String applicationName, String refreshToken, String accessToken) {
+    public Drive makeClient(String clientId, String clientSecret, Collection<String> scopes, String applicationName, String refreshToken, String accessToken, String emailAddress, String p12FileName) {
         return new Drive(new NetHttpTransport(), new JacksonFactory(), null);
     }
 }

@@ -59,6 +59,12 @@ public class GoogleDriveConfiguration {
     @UriParam
     private String applicationName;
 
+    @UriParam
+    private String emailAddress;
+
+    @UriParam
+    private String p12FileName;
+
     public GoogleDriveApiName getApiName() {
         return apiName;
     }
@@ -79,6 +85,17 @@ public class GoogleDriveConfiguration {
      */
     public void setMethodName(String methodName) {
         this.methodName = methodName;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    /**
+     * The emailAddress of the Google Service Account.
+     */
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
     }
 
     public String getClientId() {
@@ -145,5 +162,15 @@ public class GoogleDriveConfiguration {
      */
     public void setScopes(List<String> scopes) {
         this.scopes = scopes;
+    }
+    
+    public String getP12FileName() {
+        return p12FileName;
+    }
+    /**
+     * The name of the p12 file which has the private key to use with the Google Service Account.
+     */
+    public void setP12FileName(String p12FileName) {
+        this.p12FileName = p12FileName;
     }
 }
